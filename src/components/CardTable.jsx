@@ -2,25 +2,17 @@ import React, {Component} from 'react';
 
 class CardTable extends Component {
     
-    state = {
-        cardList: []
-    };
-
-    componentDidMount() {
-        fetch('http://localhost:8080/cards/')
-        .then(res => res.json())
-        .then((data) => {
-            this.setState({ cardList: data })
-        })
-        .catch(error => console.log(error))
-    }
-
-    componentDidUpdate() {
-        
-    }
+//    componentDidUpdate() {
+//        fetch('http://localhost:8080/cards/' + 'Jitte')
+//        .then(res => res.json())
+//        .then((data) => {
+//            this.setState({ cardList: data})
+//        })
+//        .catch(error => console.log(error))
+//    }
 
     render() {
-        console.log(this.state.cardList)
+        console.log(this.props.cardList)
         return (
             <div>
                 <table className="table">
@@ -35,7 +27,7 @@ class CardTable extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {this.state.cardList.map(card => 
+                    {this.props.cardList.map(card => 
                         <tr key={card.id}>
                             <td>{card.userName}</td>
                             <td>{card.userEmail}</td>
@@ -43,6 +35,9 @@ class CardTable extends Component {
                             <td>{card.condition}</td>
                             <td>{card.price} huf</td>
                             <td>{card.status}</td>
+                            <td>
+                                <button>Einstand!</button>
+                            </td>
                         </tr>)
                     }
                     </tbody>
