@@ -1,21 +1,12 @@
 import React, {Component} from 'react';
 
 class CardTable extends Component {
-    
-//    componentDidUpdate() {
-//        fetch('http://localhost:8080/cards/' + 'Jitte')
-//        .then(res => res.json())
-//        .then((data) => {
-//            this.setState({ cardList: data})
-//        })
-//        .catch(error => console.log(error))
-//    }
 
     render() {
         console.log(this.props.cardList)
         return (
             <div>
-                <table className="table">
+                <table className="table table-responsive-sm table-dark">
                     <thead>
                         <tr>
                             <td scope="col">User</td>
@@ -36,7 +27,7 @@ class CardTable extends Component {
                             <td>{card.price} huf</td>
                             <td>{card.status}</td>
                             <td>
-                                <button>Einstand!</button>
+                                <button class="btn btn-light">Einstand!</button>
                             </td>
                         </tr>)
                     }

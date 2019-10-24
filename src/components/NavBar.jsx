@@ -39,14 +39,36 @@ class NavBar extends Component {
 
     render() {
         return (
-            <nav>
-                <h1>Booyakasha</h1>
-                <a  onClick={this.onSubmit}>ALL CARDS</a>
-                <form>
-                    <input name="name" onChange={this.onChange} type="name" placeholder="card name" aria-label="Search"/>
-                    <button onClick={this.onSearch} type="submit">Search</button>
-                </form>
-            </nav>       
+            //<nav>
+            //    <h1>Booyakasha</h1>
+            //    <button class="btn btn-primary" onClick={this.onSubmit}>ALL CARDS</button>
+            //    <form class="form-inline">
+            //        <input class="form-control mr-sm-2" name="name" onChange={this.onChange} type="name" placeholder="card name" aria-label="Search"/>
+            //        <button class="btn btn-primary" onClick={this.onSearch} type="submit">Search</button>
+            //    </form>
+            //</nav>
+
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">MtgTrader</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" onClick={this.onSubmit} href="#">All Cards <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">My Orders <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" name="name" onChange={this.onChange} type="name" placeholder="card name" aria-label="Search"/>
+                        <button class="btn btn-dark" onClick={this.onSearch} type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         )
     }
 }
