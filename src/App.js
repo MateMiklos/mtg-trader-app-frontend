@@ -1,9 +1,7 @@
 import React, {Fragment, Component} from 'react';
-import ImageBackground from 'react'
 import './App.css';
 import NavBar from './components/NavBar';
 import CardTable from './components/CardTable';
-import BackgroundImage from './components/BackgroundImage';
 
 export default class App extends Component {
 

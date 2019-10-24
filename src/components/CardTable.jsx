@@ -6,7 +6,7 @@ class CardTable extends Component {
         console.log(this.props.cardList)
         return (
             <div>
-                <table className="table table-responsive-sm table-dark">
+                <table className="table table-responsive-sm table-dark table-hover">
                     <thead>
                         <tr>
                             <td scope="col">User</td>
